@@ -1,0 +1,224 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"/>
+        <link href="{% static 'images/favicon.png' %}" rel="icon" />
+
+        <title>The World Ranking</title>
+        <meta property="og:title" content="The World Ranking"/>
+        <meta property="twitter:title" content="The World Ranking"/>
+
+        <meta name="description" content="Discover the most interesting and up-to-date world statistics on countries, economies, entertainment, business, sports and more. Get comprehensive rankings and insights to help you make informed decisions." />
+        <meta property="og:description" content="Discover the most interesting and up-to-date world statistics on countries, economies, entertainment, business, sports and more. Get comprehensive rankings and insights to help you make informed decisions.">
+        <meta property="twitter:description" content="Discover the most interesting and up-to-date world statistics on countries, economies, entertainment, business, sports and more. Get comprehensive rankings and insights to help you make informed decisions.">
+
+        <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+        <link rel="canonical" href="{% url 'home' %}"/>
+        <meta property="og:url" content="{% url 'home' %}"/>
+        <meta property="twitter:url" content="{% url 'home' %}"/>
+        <meta property="og:image" content="{% static 'images/home.jpg' %}">
+
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="The World Ranking" />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        <meta name="author" content="theworldranking.com" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/font-awesome/css/all.min.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}" />
+
+
+        <link rel="manifest" href="{% static 'images/site.webmanifest' %}">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@worldranking_" />
+        <meta name="twitter:creator" content="@worldranking_" />
+        <meta name="author" content="The World Ranking" />
+        <meta property="article:publisher" content="https://twitter.com/worldranking_" />
+        <meta property="article:modified_time" content="2023-01-11T05:22:21+00:00" />
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="The World Ranking" />
+        <meta name="twitter:label2" content="Est. reading time" />
+        <meta name="twitter:data2" content="5 minute" />
+
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicon-96x96.png' %}">
+        <link rel="icon" type="image/png" sizes="128x128" href="{% static 'images/favicon-128x128.png' %}">
+        <link rel="icon" type="image/png" sizes="196x196" href="{% static 'images/favicon-196x196.png' %}">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{% static 'images/apple-touch-icon-57x57.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{% static 'images/apple-touch-icon-60x60.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'images/apple-touch-icon-72x72.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{% static 'images/apple-touch-icon-76x76.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'images/apple-touch-icon-114x114.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'images/apple-touch-icon-120x120.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'images/apple-touch-icon-144x144.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'images/apple-touch-icon-152x152.png' %}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+    
+        <meta name="application-name" content="The World Ranking">
+        <meta name="msapplication-TileColor" content="#6acbdc">
+        <meta name="msapplication-TileImage" content="{% static 'images/mstile-144x144.png' %}">
+        <meta name="msapplication-square70x70logo" content="{% static 'images/mstile-70x70.png' %}">
+        <meta name="msapplication-square150x150logo" content="{% static 'images/mstile-150x150.png' %}">
+        <meta name="msapplication-square310x310logo" content="{% static 'images/mstile-310x310.png' %}">
+
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    </head>
+
+    <body>
+
+        <div id="main-wrapper">
+            <div class="container-fluid px-0">
+                <div class="row g-0 min-vh-100">
+                    <div class="col-lg-7">
+                        <div class="sticky-md-top">
+                            <div class="hero-wrap d-flex align-items-center">
+                                <div id="particles-js" class="hero-particles"></div>
+                                <div class="hero-mask opacity-9 bg-dark"></div>
+                                <div class="hero-content w-100 min-vh-100 d-flex flex-column">
+
+                                    <div class="container py-5 px-4 px-lg-5 my-auto">
+                                        <div class="row text-center">
+
+                                            <div class="col-12 mx-auto mb-4">
+                                                <style>
+                                                    .responsive {
+                                                        width: 100%;
+                                                        max-width: 150px;
+                                                        height: auto;
+                                                    }
+                                                    
+                                                </style>
+                                                <a href="{% url 'home' %}" title="The World Ranking">
+                                                    <img class="responsive" src="{% static 'images/logo.png' %}" alt="The World Ranking" />
+                                                </a>
+
+                                            </div>
+
+                                            <div class="col-12 mx-auto">
+                                                <h1 class="text-15 fw-600 text-white mb-4">The World Ranking &#129351;</h1>
+                                                <h2 class="text-9 text-grey d-inline-block fw-700 rounded px-3 py-2 mb-4" style="background-color: #6acbdc;">{{ text }}</h2>
+                                                
+                                            </div>
+
+                                            <div class="col-md-9 col-xl-8 mx-auto">
+                                                {% if result %}
+                                                {% else %}
+                                                <p class="text-5 text-light mb-3">Get notified when we launch, along with <b>{{ subscribers }}</b> others.</p>
+                                                {% endif %}
+                                                <div>
+                                                    {% if result %}
+                                                    <p class="subscribe-form-result mt-3" style="color: #6acbdc;">
+                                                        You will receive email at <b>{{ email }}</b> once we are LIVE! along with <b>{{ subscribers }}</b> others.
+                                                    </p>
+                                                    {% else %}
+                                                    <form action="" method="POST" id="subscriber-form" onsubmit="return validate()">
+                                                        {% csrf_token %}
+                                                        <div class="input-group">
+                                                            <input id="emailaddress" type="email" name="subscribe-form-email" class="form-control required" required placeholder="Enter Your Email Here.."/>
+                                                            <button class="btn px-4 shadow-none" data-dismiss="alert" style="background-color: #6acbdc;" type="submit">
+                                                                <span class="d-none d-sm-block">Notify Me</span>
+                                                                <span class="text-4 d-block d-sm-none"><i class="fas fa-arrow-right"></i></span>
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                    {% endif %}
+                                                    <p class="subscribe-form-result mt-3" style="color: #6acbdc;" id="alert"></p>
+                                                </div>
+                                                <script>
+                                                    function validate() {
+                                                        var email = document.getElementById("emailaddress").value;
+                                                        var reg = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+                                                        var result = reg.test(email);
+                                                    
+                                                        if (result == false) {
+                                                            $("#alert").html('In-valid Email!');
+                                                            return false;
+                                                        }
+                                                        return true;
+                                                    }
+                                                </script>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="container pb-2 px-3">
+                                        <div class="row text-white">
+                                            
+                                            <div class="col-sm-6 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                <span class="me-2"><i class="fas fa-envelope"></i></span>hello.theworldranking@gmail.com
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 d-flex align-items-center justify-content-left mt-2 mt-sm-0">
+
+                                            </div>
+                                            <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end mt-2 mt-md-0">
+                                                <ul class="social-icons social-icons-light">
+                                                    <li class="social-icons-twitter">
+                                                        <a data-bs-toggle="tooltip" href="http://www.twitter.com/worldranking_" target="_blank" title="Twitter" >
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </li>                            
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container pb-2 px-3 d-lg-none d-xl-none">
+                                        <div class="row text-white">
+
+                                            <div class="d-flex align-items-center justify-content-center mt-2 mt-sm-0">
+                                                <span class="me-2"></span>Latest Tweets
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="container pb-2 px-3 d-lg-none d-xl-none">
+                                        <div class="row text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 bg-light text-center">
+                        <div class="container" style="max-width: inherit;">
+                            <a class="twitter-timeline" 
+                            data-theme="light" 
+                            data-chrome="noborders" 
+                            data-tweet-limit="4" 
+                            data-show-replies="true" 
+                            href="https://twitter.com/worldranking_?ref_src=twsrc%5Etfw">
+                            Tweets by worldranking_
+                        </a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="{% static 'vendor/particles/particles.min.js' %}"></script>
+        <script src="{% static 'vendor/particles/particles.app.js' %}"></script>
+
+    </body>
+</html>
